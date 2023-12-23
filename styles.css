@@ -1,3 +1,4 @@
+/* Styles cho các thiết bị khác ngoài điện thoại */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,10 +16,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./Image/IMG_1196.JPG'); /* Đường dẫn đến hình ảnh nền */
-    background-size: contain; /* Đảm bảo hình ảnh nhỏ lại nhưng vẫn tràn màn hình */
+    background-image: url('./Image/background.jpg'); /* Đường dẫn đến hình ảnh nền */
+    background-size: cover;
     background-position: center;
-   
 }
 
 .background-overlay {
@@ -44,15 +44,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
 }
 
 .card {
     cursor: pointer;
     transition: transform 0.3s;
-    margin: 10% auto; /* Đưa tấm thiệp vào giữa và làm tấm thiệp lớn hơn */
+    margin: 15% auto; /* Đưa tấm thiệp vào giữa */
     z-index: 1; /* Đảm bảo nó nằm trên hình nền */
-   
 }
 
 .card:hover {
@@ -75,24 +73,20 @@ body {
 
 .letter {
     background-color: #fff;
-    padding: 30px;
-    text-align: left;
+    padding: 20px;
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 400px;
     margin: 0 auto;
-    z-index: 3;
-    position: relative;
-    border: 5px solid #e44d26;
-    border-image: linear-gradient(45deg, #e44d26, #c7381d) 1;
-    padding: 20px;
+    z-index: 3; /* Đảm bảo nó nằm trên tất cả */
+    position: relative; /* Thêm thuộc tính position */
 }
 
 .letter p {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    margin-bottom: 15px;
 }
 
 button {
@@ -112,4 +106,9 @@ button:hover {
     background-color: #c7381d;
 }
 
-
+/* Media query cho điện thoại iPhone 12 Pro Max */
+@media only screen and (max-width: 428px) {
+    .card-container {
+        margin-top: 25%; /* Điều chỉnh vị trí tấm thiệp trên màn hình điện thoại */
+    }
+}
