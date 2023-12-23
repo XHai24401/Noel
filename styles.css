@@ -1,4 +1,3 @@
-/* Styles cho các thiết bị khác ngoài điện thoại */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    overflow: hidden; /* Ngăn chặn thanh cuộn */
+    overflow: hidden;
 }
 
 .background-container {
@@ -16,45 +15,24 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./Image/background.jpg'); /* Đường dẫn đến hình ảnh nền */
+    background-image: url('./Image/IMG_1196.JPG');
     background-size: cover;
     background-position: center;
 }
 
-.background-overlay {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5); /* Độ trong suốt của overlay */
-    filter: blur(5px); /* Tùy chọn: thêm hiệu ứng mờ cho hình nền */
-    z-index: -1; /* Đặt z-index thấp hơn nội dung để nó ở phía sau */
-}
-
 .container {
     position: relative;
-    z-index: 1; /* Đảm bảo nội dung nằm trên hình nền */
-    text-align: center; /* Canh giữa nội dung */
-}
-
-.card-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .card {
     cursor: pointer;
     transition: transform 0.3s;
-    margin: 15% auto; /* Đưa tấm thiệp vào giữa */
-    z-index: 1; /* Đảm bảo nó nằm trên hình nền */
+    margin: 15% auto;
 }
 
 .card:hover {
-    transform: scale(1.1); /* Phóng to khi hover */
+    transform: scale(1.1);
 }
 
 .overlay {
@@ -67,8 +45,16 @@ body {
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Đảm bảo nó nằm trên cả tấm thiệp và hình nền */
-    cursor: pointer; /* Thêm style con trỏ khi di chuột qua */
+    z-index: 2;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    margin: 50% auto;
+    display: block;
 }
 
 .letter {
@@ -79,8 +65,8 @@ body {
     border-radius: 8px;
     max-width: 400px;
     margin: 0 auto;
-    z-index: 3; /* Đảm bảo nó nằm trên tất cả */
-    position: relative; /* Thêm thuộc tính position */
+    z-index: 3;
+    position: relative;
 }
 
 .letter p {
@@ -91,7 +77,7 @@ body {
 
 button {
     display: block;
-    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    margin: 0 auto;
     padding: 12px 24px;
     background-color: #e44d26;
     color: #fff;
@@ -106,9 +92,8 @@ button:hover {
     background-color: #c7381d;
 }
 
-/* Media query cho điện thoại iPhone 12 Pro Max */
 @media only screen and (max-width: 428px) {
-    .card-container {
-        margin-top: 25%; /* Điều chỉnh vị trí tấm thiệp trên màn hình điện thoại */
+    .card {
+        margin-top: 25%;
     }
 }
