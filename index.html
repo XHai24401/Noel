@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Noel Greetings</title>
+</head>
+<body>
+    <div class="background-container">
+        <div class="container">
+            <div class="card" onclick="openCard()">
+                <img style=" width: 20%;" src="./Image/noel.jpg" alt="Closed Card">
+            </div>
+            <div class="overlay" id="overlay" onclick="closeCard()">
+                <div class="letter">
+                    <p>Nhân dịp Giáng Sinh anh muốn dành tặng em một món quà này để mong em luôn luôn xinh đẹp đáng yêu. Gác năm cũ lại và cùng nhau trải qua thêm một năm mới hạnh phúc nhé em ❤️</p>
+                    <button onclick="closeCard()">Close</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

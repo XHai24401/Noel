@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Ngăn chặn thanh cuộn */
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./Image/IMG_1196.JPG'); /* Đường dẫn đến hình ảnh nền */
+    background-size: contain; /* Đảm bảo hình ảnh nhỏ lại nhưng vẫn tràn màn hình */
+    background-position: center;
+   
+}
+
+.background-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Độ trong suốt của overlay */
+    filter: blur(5px); /* Tùy chọn: thêm hiệu ứng mờ cho hình nền */
+    z-index: -1; /* Đặt z-index thấp hơn nội dung để nó ở phía sau */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Đảm bảo nội dung nằm trên hình nền */
+    text-align: center; /* Canh giữa nội dung */
+}
+
+.card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 10% auto; /* Đưa tấm thiệp vào giữa và làm tấm thiệp lớn hơn */
+    z-index: 1; /* Đảm bảo nó nằm trên hình nền */
+   
+}
+
+.card:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Đảm bảo nó nằm trên cả tấm thiệp và hình nền */
+    cursor: pointer; /* Thêm style con trỏ khi di chuột qua */
+}
+
+.letter {
+    background-color: #fff;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    z-index: 3;
+    position: relative;
+    border: 5px solid #e44d26;
+    border-image: linear-gradient(45deg, #e44d26, #c7381d) 1;
+    padding: 20px;
+}
+
+.letter p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+button {
+    display: block;
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    padding: 12px 24px;
+    background-color: #e44d26;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c7381d;
+}
+
+
